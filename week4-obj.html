@@ -8,6 +8,7 @@
     <script>
         function register() { return ++this.student; }
         function unregister() { return --this.student; }
+        function getStudentCount() { return this.student; }
 
         let object = new Object();
         object.korname = "웹프로그래밍";
@@ -26,7 +27,8 @@
             student: 0,
 
             register: function () { return ++this.student; },
-            unregister: function () { return --this.student; }
+            unregister: function () { return --this.student; },
+            getStudentCount: function () { return this.student; }
         }
     </script>
     <script>
@@ -37,6 +39,7 @@
 
             this.register = function () { return ++this.student; }
             this.unregister = function () { return --this.student; }
+            this.getStudentCount = function () { return this.student; }
         }
     </script>
 </head>
