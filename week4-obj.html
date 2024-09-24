@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 만들기</title>
+    <script>
+        function register() { return ++this.student; }
+        function unregister() { return --this.student; }
+
+        let object = new Object();
+        object.korname = "웹프로그래밍";
+        object.engname = "Web Programming";
+        object.code = "V024003"
+        object.student = 0
+        object.register = register;
+        object.unregister = unregister;
+
+    </script>
+    <script>
+
+        let li_object = {
+            korname: "클라우드컴퓨팅",
+            engname: "Cloud Computing",
+            student: 0,
+
+            register: function () { return ++this.student; },
+            unregister: function () { return --this.student; }
+        }
+    </script>
+    <script>
+        function Pro_object(korname, engname, student) {
+            this.korname = korname;
+            this.engname = engname;
+            this.student = student;
+
+            this.register = function () { return ++this.student; }
+            this.unregister = function () { return --this.student; }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>1. 직접 객체만들기</h1>
+    <script>
+        document.write("교과목 이름 : ");
+        document.write(object.korname + "<br>");
+        document.write("교과목 영문 이름 : ");
+        document.write(object.engname + "<br>");
+        document.write("등록 학생 수 : ");
+        document.write(object.student + "<br>")
+        document.write("after register 등록 학생 수 : ");
+        document.write(object.register());
+    </script>
+    <hr>
+    <br>
+    <h1>2. 리터럴 표기법</h1>
+    <script>
+        document.write("교과목 이름 : ");
+        document.write(li_object.korname + "<br>");
+        document.write("교과목 영문 이름 : ");
+        document.write(li_object.engname + "<br>");
+        document.write("등록 학생 수 : ");
+        document.write(li_object.student + "<br>")
+        document.write("after register 등록 학생 수 : ");
+        document.write(li_object.register());
+    </script>
+    <hr>
+    <br>
+    <h1>3. Prototype</h1>
+    <script>
+        let pro_object = new Pro_object("프로그래밍언어론", "Programming Langauges", 0);
+
+        document.write("교과목 이름 : ");
+        document.write(pro_object.korname + "<br>");
+        document.write("교과목 영문 이름 : ");
+        document.write(pro_object.engname + "<br>");
+        document.write("등록 학생 수 : ");
+        document.write(pro_object.student + "<br>");
+        document.write("after register 등록 학생 수 : ");
+        document.write(pro_object.register());
+    </script>
+
+</body>
+
+</html>
