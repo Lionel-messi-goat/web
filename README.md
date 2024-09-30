@@ -19,4 +19,11 @@
     <li>CSS3 이용하여 웹페이지 꾸미기</li>
     <li>3주차 공부 내용 정리 추가</li>
   </ul>
+  <li>Week 3</li>
+  <ul>
+    <li>객체만들기</li>
+    <li>직접객체만들기</li>
+    <li>리터럴 표기법</li>
+    <li>prototype표기법</li>
+  </ul>
 </ol>
