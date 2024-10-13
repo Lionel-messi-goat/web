@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기 만들기</title>
+    <style>
+        input {
+            width: 60px;
+            height: 100;
+        }
+    </style>
+    <script>
+        let flag = false;
+        function calculate() {
+            exp.value = eval(exp.value);
+        }
+        function del() {
+            exp.value = 0;
+            flag = false;
+        }
+
+        function val(num) {
+            if (!flag) {
+                exp.value = "";
+                exp.value = exp.value + num;
+                flag = true;
+            }
+            else {
+                {
+                    exp.value = exp.value + num;
+                }
+            }
+        }
+
+        function back() {
+            exp.value = exp.value.substring(0, exp.value.length - 1);
+        }
+    </script>
+</head>
+
+<body>
+    <h2>계산기 만들기</h2>
+    <hr>
+
+    <input type="text" name="" id="exp" style="width: 250px;" value="0">
+
+    <br>
+    <input type="button" value="BACK" onclick="back()">
+    <input type="button" value="CE" onclick="del()">
+    <input type="button" value="C" onclick="del()">
+    <input type="button" value="=" onclick="calculate()"><br>
+    <input type="button" value="7" onclick="val('7')">
+    <input type="button" value="8" onclick="val('8')">
+    <input type="button" value="9" onclick="val('9')">
+    <input type="button" value="/" onclick="val('/')"><br>
+    <input type="button" value="4" onclick="val('4')">
+    <input type="button" value="5" onclick="val('5')">
+    <input type="button" value="6" onclick="val('6')">
+    <input type="button" value="*" onclick="val('*')"><br>
+    <input type="button" value="1" onclick="val('1')">
+    <input type="button" value="2" onclick="val('2')">
+    <input type="button" value="3" onclick="val('3')">
+    <input type="button" value="-" onclick="val('-')"><br>
+    <input type="button" value="0" onclick="val('0')">
+    <input type="button" value="+" onclick="val('+')">
+    <input type="button" value="NONE">
+    <input type="button" value="NONE">
+
+    </tr>
+</body>
+
+</html>
