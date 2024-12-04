@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>세션 스토리지에 구입 리스트 저장</title>
+</head>
+
+<body>
+    <h1>세션 스토리지에 구입 리스트 저장</h1>
+    <form id="storeForm">
+        <label for="itemName">품목명: </label>
+        <input type="text" id="itemName" required>
+        <label for="itemCount">개수: </label>
+        <input type="number" id="itemCount" required>
+        <button type="submit">저장</button>
+    </form>
+    <script>
+        document.getElementById('storeForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const itemName = document.getElementById('itemName').value;
+            const itemCount = document.getElementById('itemCount').value;
+
+
+            sessionStorage.setItem(itemName, itemCount);
+            alert(`${itemName}가 세션 스토리지에 저장되었습니다.`);
+        });
+    </script>
+</body>
+
+</html>
