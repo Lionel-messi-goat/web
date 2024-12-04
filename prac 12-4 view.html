@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>일기 보기</title>
+</head>
+
+<body>
+    <h1>일기 보기</h1>
+    <p>저장된 일기를 확인하세요:</p>
+    <div id="diaryList"></div>
+    <script>
+        const diaryList = document.getElementById('diaryList');
+
+       
+        if (localStorage.length > 0) {
+            for (let i = 0; i < localStorage.length; i++) {
+                const date = localStorage.key(i); 
+                const content = localStorage.getItem(date); 
+                const diaryEntry = document.createElement('div');
+                diaryEntry.innerHTML = `<h3>${date}</h3><p>${content}</p><hr>`;
+                diaryList.appendChild(diaryEntry);
+            }
+        } else {
+            diaryList.innerHTML = "<p>저장된 일기가 없습니다.</p>";
+        }
+    </script>
+</body>
+
+</html>
