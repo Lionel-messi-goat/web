@@ -31,4 +31,47 @@
     <li>inner프로퍼티</li>
     <li>DOM 객체</li>
   </ul>
+   <li>Week 6</li>
+  <ul>
+    <li>Event 정의 및 핸들링 공부</li>
+    <li>실습문제 9-2</li>
+    <li>실습문제 9-3</li>
+  </ul>
+   <li>Week 7</li>
+  <ul>
+    <li>BOM</li>
+    <li>Canvas Graphic</li>
+    <li>예제 5번, 6번 (div 태그에 시계 구현하기)</li>
+  </ul>
+   <li>Week 9</li>
+  <ul>
+    <li>HTTP, Cookie, Web Storage</li>
+    <li>Apache Web Server</li>
+  </ul>
+   <li>Week 10</li>
+  <ul>
+    <li>오디오, 비디오 제어</li>
+    <li>Web Worker</li>
+  </ul>
+   <li>Week 11</li>
+  <ul>
+    <li>JS-DataTypes</li>
+    <li>ES6</li>
+    <li>hoisting, var, let, const</li>
+    <li>JS-Debugger</li>
+  </ul>
+   <li>Week 12</li>
+  <ul>
+    <li>JS-Functions (매개 변수, 영역, 일급함수,콜백함수,고차함수,합성함수,커링)</li>
+  </ul>
+   <li>Week 13</li>
+  <ul>
+    <li>Node.JS</li>
+    <li>Module 활용 web server 만들기</li>
+  </ul>
+   <li>Week 14</li>
+  <ul>
+    <li>Express js</li>
+    <li>미들웨어, 라우터 사용하기</li>
+  </ul>
 </ol>
