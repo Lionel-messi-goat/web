@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+    <script>
+        function enter(e) {
+            if (e.key == "alt") {
+                let exp = document.getElementById("exp");
+                let result = document.getElementById("result");
+                result.value = eval(exp.value);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h2>계산기 만들기</h2>
+    <hr>
+    <form>
+        <p>수식을 입력하고 &lt;Enter&gt;를 입력하세요</p>
+
+        식 <input type="text" id="exp" value="" onkeydown="enter(event)">
+        <br>
+        값 <input type="text" id="result" value="   ">
+
+    </form>
+
+</body>
+
+</html>
