@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>일기 쓰기</title>
+</head>
+
+<body>
+    <h1>일기 쓰기</h1>
+    <p>오늘: <span id="currentDate"></span></p>
+    <textarea id="diaryContent" rows="10" cols="50" placeholder="오늘의 일기를 입력하세요"></textarea>
+    <br>
+    <button id="saveButton">저장</button>
+    <button id="viewButton" onclick="window.open('prac12-04-view.html')">보기</button>
+    <script>
+   
+        const today = new Date();
+        const formattedDate = today.toISOString().split('T')[0];
+        document.getElementById('currentDate').textContent = formattedDate;
+
+        document.getElementById('saveButton').addEventListener('click', () => {
+            const diaryContent = document.getElementById('diaryContent').value.trim();
+            if (diaryContent) {
+                localStorage.setItem(formattedDate, diaryContent);
+                alert("일기가 저장되었습니다!");
+                document.getElementById('diaryContent').value = ""; 
+            } else {
+                alert("일기 내용을 입력하세요.");
+            }
+        });
+    </script>
+</body>
+
+</html>
