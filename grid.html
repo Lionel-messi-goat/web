@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Box</title>
+</head>
+<body>
+    <div style="display: grid;">
+        <div style="background-color: aliceblue;">Item 1</div>
+        <div style="background-color: beige;">Item 2</div>
+        <div style="background-color: lightblue;">Item 3</div>
+        <div style="background-color: orange;">Item 4</div>
+    </div>
+    <hr>
+    <div style="display: grid; grid-template-columns: 2fr 3fr; grid-gap: 10px; grid-template-rows: 50px 50px;">
+        <div style="background-color: aliceblue;">Item 1</div>
+        <div style="background-color: beige;">Item 2</div>
+        <div style="background-color: lightblue;">Item 3</div>
+        <div style="background-color: orange;">Item 4</div>
+    </div>
+    <hr>
+    <div style="display: grid; grid-template-columns: 100px 100px 100px;">
+        <div style="background-color: aliceblue; grid-column: 1/3;">Item 1</div>
+        <div style="background-color: beige;">Item 2</div>
+        <div style="background-color: lightblue;">Item 3</div>
+        <div style="background-color: orange;">Item 4</div>
+    </div>
+    <hr><br><br>
+    <div style="display: grid; grid-template-areas:'header header' 'sidebar content' 'footer footer';
+    grid-template-columns: 1fr 1fr; ">
+        <div style="background-color: aliceblue; grid-area: header;">Header</div>
+        <div style="background-color: beige; grid-area: sidebar;">Sidebar</div>
+        <div style="background-color: lightblue; grid-area: content;">Content</div>
+        <div style="background-color: orange; grid-area: footer; text-align: center;">Footer</div>
+    </div>
+</body>
+</html>
