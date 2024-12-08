@@ -1,0 +1,9 @@
+function greet(greeting) {
+    return function (name) {
+        console.log(greeting + ", " + name);
+    }
+}
+
+let hello = greet('hello');
+hello('jiho');
+hello('world');
